@@ -87,15 +87,40 @@
 
 
 
-<meta name="description" content="个人信息整理、技术博客、技术整理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="猿动力">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="主要使用UICollectionView的装饰视图实现(DecorationView)
+
+技术要点:
+
+自定义一个UICollectionViewLayoutAttributes,加入color属性.
+
+实现UICollectionReusableView的子类，用来创建DecorationViewCell
+
+自定义一个UICollectionViewLayout,继承UICollectionV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UICollectionViewFlowlayout设置Section的背景色">
+<meta property="og:url" content="http://yoursite.com/2017/02/10/collectionview-section/index.html">
 <meta property="og:site_name" content="猿动力">
-<meta property="og:description" content="个人信息整理、技术博客、技术整理">
+<meta property="og:description" content="主要使用UICollectionView的装饰视图实现(DecorationView)
+
+技术要点:
+
+自定义一个UICollectionViewLayoutAttributes,加入color属性.
+
+实现UICollectionReusableView的子类，用来创建DecorationViewCell
+
+自定义一个UICollectionViewLayout,继承UICollectionV">
+<meta property="og:updated_time" content="2017-02-10T05:59:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猿动力">
-<meta name="twitter:description" content="个人信息整理、技术博客、技术整理">
+<meta name="twitter:title" content="UICollectionViewFlowlayout设置Section的背景色">
+<meta name="twitter:description" content="主要使用UICollectionView的装饰视图实现(DecorationView)
+
+技术要点:
+
+自定义一个UICollectionViewLayoutAttributes,加入color属性.
+
+实现UICollectionReusableView的子类，用来创建DecorationViewCell
+
+自定义一个UICollectionViewLayout,继承UICollectionV">
 
 
 
@@ -123,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/10/collectionview-section/"/>
 
 
 
 
 
-  <title> 猿动力 </title>
+  <title> UICollectionViewFlowlayout设置Section的背景色 | 猿动力 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +179,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +260,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -272,10 +295,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/02/10/collectionview-section/" itemprop="url">
-                  UICollectionViewFlowlayout设置Section的背景色
-                </a>
+                UICollectionViewFlowlayout设置Section的背景色
               
             
           </h1>
@@ -326,9 +346,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>主要使用UICollectionView的装饰视图实现(DecorationView)</p>
 </blockquote>
 <p>技术要点:</p>
@@ -349,16 +367,20 @@
 </li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -367,21 +389,22 @@
       
 
       
-
+        
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -389,6 +412,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -557,6 +584,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
