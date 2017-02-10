@@ -732,6 +732,11 @@
 <li>在<code>-applyLayoutAttributes:</code>方法中，设置背景色。  </li>
 </ul>
 </li>
+<li><p>实现<code>UICollectionViewDelegateFlowLayout</code>子协议。</p>
+<ul>
+<li>设置获取Section的背景颜色的委托事件.</li>
+</ul>
+</li>
 <li><p>自定义一个UICollectionViewLayout,继承UICollectionViewFlowlayout.</p>
 <ul>
 <li><p>在<code>+layoutAttributesClass</code>返回自定义的<code>UICollectionViewLayoutAttributes</code>.</p>
@@ -740,6 +745,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[self registerClass:[xxxCustomReusableView class] forDecorationViewOfKind:kDecorationReuseIdentifier];</div></pre></td></tr></table></figure>
 </li>
 <li><p>在<code>-layoutAttributesForElementsInRect:</code>方法，计算并加入当前rect中显示的section的<code>attributes</code>.</p>
+<ul>
+<li>将<strong>self.collectionView.delegate</strong>转换为<strong>UICollectionViewDelegateFlowLayout</strong>子协议类型。</li>
+<li>获取委托事件返回的背景颜色，并设置到自定义的<code>attributes</code>中。</li>
+</ul>
 </li>
 </ul>
 </li>
