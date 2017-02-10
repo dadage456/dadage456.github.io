@@ -87,15 +87,49 @@
 
 
 
-<meta name="description" content="个人信息整理、技术博客、技术整理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="猿动力">
-<meta property="og:url" content="http://yuanpower.me/index.html">
+<meta name="description" content="UICollectionView 构成
+
+Cells
+Supplementary Views 追加视图（类似Header 或则 Footer）
+Decoration Views 装饰视图（用作背景展示）
+
+
+布局方法的执行顺序
+
+prepareLayout()
+-(CGSize)collectionViewContentSize
+-(NSArray *)layoutAttributesForEl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义UICollectionView布局的技术要点">
+<meta property="og:url" content="http://yuanpower.me/2017/02/10/custom-uicollectionview-layout.html">
 <meta property="og:site_name" content="猿动力">
-<meta property="og:description" content="个人信息整理、技术博客、技术整理">
+<meta property="og:description" content="UICollectionView 构成
+
+Cells
+Supplementary Views 追加视图（类似Header 或则 Footer）
+Decoration Views 装饰视图（用作背景展示）
+
+
+布局方法的执行顺序
+
+prepareLayout()
+-(CGSize)collectionViewContentSize
+-(NSArray *)layoutAttributesForEl">
+<meta property="og:updated_time" content="2017-02-10T07:25:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="猿动力">
-<meta name="twitter:description" content="个人信息整理、技术博客、技术整理">
+<meta name="twitter:title" content="自定义UICollectionView布局的技术要点">
+<meta name="twitter:description" content="UICollectionView 构成
+
+Cells
+Supplementary Views 追加视图（类似Header 或则 Footer）
+Decoration Views 装饰视图（用作背景展示）
+
+
+布局方法的执行顺序
+
+prepareLayout()
+-(CGSize)collectionViewContentSize
+-(NSArray *)layoutAttributesForEl">
 
 
 
@@ -123,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="http://yuanpower.me/"/>
+  <link rel="canonical" href="http://yuanpower.me/2017/02/10/custom-uicollectionview-layout.html"/>
 
 
 
 
 
-  <title> 猿动力 </title>
+  <title> 自定义UICollectionView布局的技术要点 | 猿动力 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +188,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,174 +269,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuanpower.me/2017/02/10/cocoapods-trunk.html">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Zhang Gaotang">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="猿动力">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="猿动力" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/10/cocoapods-trunk.html" itemprop="url">
-                  为自己的库创建Pod
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T15:26:48+08:00">
-                2017-02-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用Cocoapods可以很方便的管理第三方类库，我们自己在开发过程中也会总结出自己常用的一些类库。我们也想让我们的类库用Cocoapods管理。</p>
-<p>使用Cocoapods可以创建<strong>私有的Pod</strong>用于公司内容，也可以提交到Cocoapods truck.</p>
-<ul>
-<li><p>创建私有的Pod，用于公司内部。(<a href="https://guides.cocoapods.org/making/private-cocoapods.html" target="_blank" rel="external">官方教程</a>)</p>
-</li>
-<li><p>提交自己项目的podspec文件到CocoaPods trunk。<a href="http://code.tutsplus.com/tutorials/creating-your-first-cocoapod--cms-24332" target="_blank" rel="external">官方提供教程</a></p>
-</li>
-</ul>
-<p><strong>其实官方给的教程就很全了，没必要看这个文档。</strong></p>
-<h3 id="创建项目的podspec文件"><a href="#创建项目的podspec文件" class="headerlink" title="创建项目的podspec文件"></a>创建项目的podspec文件</h3><blockquote>
-<p>不管创建私有的Pod、还是发布到trunk,第一步就是要创建podspec文件。  </p>
-</blockquote>
-<ul>
-<li><p><code>podspec</code>文件的作用<br>告诉cocoapods关于类库的基本信息、源码地址、资源内容等。([具体介绍podSpec参数])</p>
-</li>
-<li><p><code>podspec</code>文件的创建与验证</p>
-<ul>
-<li><code>pod lib create</code> : 自动生成一个pod项目所需的所有文件。包括类podSpec文件、DEMO工程。</li>
-<li><code>pod lib lint</code> : 验证podSpec文件是否正确。</li>
-<li><code>pod spec create your_pod_spec_name</code> : 手动创建<code>podSpec</code>文件</li>
-</ul>
-</li>
-</ul>
-<h3 id="创建私有的Pod"><a href="#创建私有的Pod" class="headerlink" title="创建私有的Pod"></a>创建私有的Pod</h3><ul>
-<li><p>用于公共类库DEMO工程使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod &apos;Name&apos;, :path =&gt; &apos;~/code/Pods/&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>直接指定一个<code>podspec</code>文件、或包含<code>podspec</code>文件的git源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">pod &apos;MyCommon&apos;, :podspec =&gt; &apos;https://github/&lt;your account&gt;/MyCommon.podspec&apos;</div><div class="line">或</div><div class="line">pod &apos;NAME&apos;, :git =&gt; &apos;https://example.com/URL/to/repo/NAME.git&apos;</div><div class="line">或</div><div class="line">pod repo add [Private Repo Name] [GitHub HTTPS clone URL]</div><div class="line">pod repo add WTSpecs https://coding.net/wtlucky/WTSpecs.git</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="提交podspec文件到-Cocoapods-trunk"><a href="#提交podspec文件到-Cocoapods-trunk" class="headerlink" title="提交podspec文件到 Cocoapods trunk"></a>提交podspec文件到 Cocoapods trunk</h3><blockquote>
-<p>前提：已经为自己的类库创建了podspec文件，并通过验证。</p>
-</blockquote>
-<ul>
-<li>注册Cocoapods trunk邮箱<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">pod trunk register useremail &apos;username&apos; --verbose</div><div class="line"></div><div class="line">这步总是提示我:</div><div class="line">[!] There was an error registering with trunk: getaddrinfo: nodename nor servname provided, or not known.</div><div class="line"></div><div class="line">后来发现实DNS问题,解决方法：</div><div class="line"></div><div class="line"> * 修改DNS：8.8.8.8</div><div class="line"> * 关闭所有的VPN代理。</div><div class="line"> * 重启电脑</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul>
-<li><a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">唐巧:用CocoaPods做iOS程序的依赖管理</a></li>
-<li><a href="http://www.tuicool.com/articles/6FF7fi" target="_blank" rel="external">发布自己的pods到CocoaPods trunk</a></li>
-<li><a href="http://lijianfei.sinaapp.com/?p=846&amp;utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">学习使用CocoaPods后涨的姿势</a></li>
-<li><a href="https://guides.cocoapods.org" target="_blank" rel="external">Cocoapods官方指导</a></li>
-<li><a href="http://www.jianshu.com/p/327c667d9f1a" target="_blank" rel="external">让代码支持CocoaPods</a><br><a href="http://www.tuicool.com/articles/6FF7fi" target="_blank" rel="external">http://www.tuicool.com/articles/6FF7fi</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -437,10 +304,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/02/10/custom-uicollectionview-layout.html" itemprop="url">
-                  自定义UICollectionView布局的技术要点
-                </a>
+                自定义UICollectionView布局的技术要点
               
             
           </h1>
@@ -491,9 +355,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <h3 id="UICollectionView-构成"><a href="#UICollectionView-构成" class="headerlink" title="UICollectionView 构成"></a>UICollectionView 构成</h3></blockquote>
 <ul>
 <li>Cells</li>
@@ -596,16 +458,20 @@
 <li><a href="https://www.raywenderlich.com/107439/uicollectionview-custom-layout-tutorial-pinterest" target="_blank" rel="external">raywender自定义CollectoionView布局</a></li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -614,170 +480,42 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yuanpower.me/2017/02/10/collectionview-section.html">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Zhang Gaotang">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="猿动力">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="猿动力" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/10/collectionview-section.html" rel="next" title="UICollectionView设置Section的背景色">
+                <i class="fa fa-chevron-left"></i> UICollectionView设置Section的背景色
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/02/10/collectionview-section.html" itemprop="url">
-                  UICollectionView设置Section的背景色
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+              <a href="/2017/02/10/cocoapods-trunk.html" rel="prev" title="为自己的库创建Pod">
+                为自己的库创建Pod <i class="fa fa-chevron-right"></i>
+              </a>
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T13:57:55+08:00">
-                2017-02-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <blockquote>
-<p>主要使用UICollectionView的装饰视图实现(DecorationView)<br>技术要点:</p>
-</blockquote>
-<ol>
-<li><p>自定义一个<code>UICollectionViewLayoutAttributes</code>,加入color属性用来设置背景色。</p>
-<ul>
-<li><p>在<code>-layoutAttributesForDecorationViewOfKind:</code>方法中，设置新增属性的初始值。</p>
-</li>
-<li><p>实现NSCopying协议<code>-copyWithZone:</code>,设置新增属性的copy功能。  </p>
-</li>
-</ul>
-</li>
-<li><p>实现<code>UICollectionReusableView</code>的子类，用来创建<code>DecorationViewCell</code></p>
-<ul>
-<li>在<code>-applyLayoutAttributes:</code>方法中，设置背景色。  </li>
-</ul>
-</li>
-<li><p>自定义一个UICollectionViewLayout,继承UICollectionViewFlowlayout.</p>
-<ul>
-<li><p>在<code>+layoutAttributesClass</code>返回自定义的<code>UICollectionViewLayoutAttributes</code>.</p>
-</li>
-<li><p>在<code>-prepareLayout</code>中，注册创建的装饰视图<code>DecorationViewCell</code>.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[self registerClass:[xxxCustomReusableView class] forDecorationViewOfKind:kDecorationReuseIdentifier];</div></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>-layoutAttributesForElementsInRect:</code>方法，计算并加入当前rect中显示的section的<code>attributes</code>.</p>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -785,6 +523,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -804,8 +546,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -847,6 +598,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UICollectionView-构成"><span class="nav-number">1.</span> <span class="nav-text">UICollectionView 构成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局方法的执行顺序"><span class="nav-number">2.</span> <span class="nav-text">布局方法的执行顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义UICollectionLayout实现自定义布局"><span class="nav-number">3.</span> <span class="nav-text">自定义UICollectionLayout实现自定义布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义UICollectionViewLayoutAttributes"><span class="nav-number">4.</span> <span class="nav-text">自定义UICollectionViewLayoutAttributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重新计算布局"><span class="nav-number">5.</span> <span class="nav-text">重新计算布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换布局"><span class="nav-number">6.</span> <span class="nav-text">切换布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动对齐网格"><span class="nav-number">7.</span> <span class="nav-text">自动对齐网格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画效果"><span class="nav-number">8.</span> <span class="nav-text">动画效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DEMO与参考"><span class="nav-number">9.</span> <span class="nav-text">DEMO与参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -953,6 +720,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
