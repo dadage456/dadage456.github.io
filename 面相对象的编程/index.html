@@ -5,15 +5,17 @@
   
 
   
-  <title>1 | Hexo</title>
+  <title>面相对象的编程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="1">
-<meta property="og:url" content="http://yoursite.com/1/index.html">
+  <meta name="description" content="面相对象的编程 1、抽象的好处 * 可以隐藏实现细节 * 改动不会影响到整个程序 * 让接口提供更多的信息 * 更容易提高性能 * 让程序的正确性更显而易见 * 程序更具自我说明性 * 无须在程序内到处传递数据 * 你可以像在现实世界中那样的操作实体，而不用在底层实现上操作它2、抽象的例子 123456巡航控制：								搅拌机：								油罐	* 设置速度							* 开启">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面相对象的编程">
+<meta property="og:url" content="http://yoursite.com/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面相对象的编程 1、抽象的好处 * 可以隐藏实现细节 * 改动不会影响到整个程序 * 让接口提供更多的信息 * 更容易提高性能 * 让程序的正确性更显而易见 * 程序更具自我说明性 * 无须在程序内到处传递数据 * 你可以像在现实世界中那样的操作实体，而不用在底层实现上操作它2、抽象的例子 123456巡航控制：								搅拌机：								油罐	* 设置速度							* 开启">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-23T06:54:09.000Z">
-<meta property="article:modified_time" content="2020-06-23T06:54:09.564Z">
+<meta property="article:published_time" content="2019-12-16T03:30:31.798Z">
+<meta property="article:modified_time" content="2019-12-20T02:11:23.122Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -64,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-面相对象的编程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1/index.html" class="article-date">
-  <time datetime="2020-06-23T06:54:09.000Z" itemprop="datePublished">2020-06-23</time>
+    <a href="/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2019-12-16T03:30:31.798Z" itemprop="datePublished">2019-12-16</time>
 </a>
     
   </div>
@@ -78,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      1
+      面相对象的编程
     </h1>
   
 
@@ -86,17 +88,66 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>面相对象的编程</p>
+<p>1、抽象的好处</p>
+<pre><code>* 可以隐藏实现细节
+* 改动不会影响到整个程序
+* 让接口提供更多的信息
+* 更容易提高性能
+* 让程序的正确性更显而易见
+* 程序更具自我说明性
+* 无须在程序内到处传递数据
+* 你可以像在现实世界中那样的操作实体，而不用在底层实现上操作它</code></pre><p>2、抽象的例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">巡航控制：								搅拌机：								油罐</span><br><span class="line">	* 设置速度							* 开启								* 填充油罐</span><br><span class="line">	* 获取当前设置					 * 关闭								 * 排空油罐</span><br><span class="line">	* 恢复之前的速度					* 设置速度						 * 获取油罐容积</span><br><span class="line">	* 解散								 * 启动”即时粉碎器“			* 获取油罐状态</span><br><span class="line">												* 停止”即时粉碎器“</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3、指导建议</p>
+<pre><code>* 把常见的底层数据类型创建为ADT并使用这些ADT,而不再使用底层数据类型
+* 把像文件这样的常用对象当成ADT
+* 简单的事物也可当做ADT
+* 不要让ADT依赖于其存储介质</code></pre><p>二、良好的类接口</p>
+<blockquote>
+<p>创建高质量的类，创建一个好的接口最重要</p>
+</blockquote>
+<ul>
+<li>类的接口应该展现一致的抽象层次</li>
+<li>一定要理解类所实现的抽象是什么</li>
+<li>提供成对的服务</li>
+<li>把不相关的信息转移到其他类中</li>
+<li>尽可能让接口编程，而不是表达语义</li>
+<li>谨防在修改时破坏接口的抽象</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/1/index.html" data-id="ckbsp26qy0000ctg1b30192ue" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/%E9%9D%A2%E7%9B%B8%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BC%96%E7%A8%8B/" data-id="ckbsp5c46000keig1fvtk6dcb" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86-ios/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          个人简历-ios
+        
+      </div>
+    </a>
+  
+  
+    <a href="/ios%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS组件化开发</div>
+    </a>
+  
+</nav>
+
   
 </article>
 

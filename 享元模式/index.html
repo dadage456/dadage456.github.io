@@ -5,15 +5,17 @@
   
 
   
-  <title>1 | Hexo</title>
+  <title>享元模式 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="1">
-<meta property="og:url" content="http://yoursite.com/1/index.html">
+  <meta name="description" content="享元模式 对于类来说： 共享一个类设计。使用外部状态区分 对于对象来说： 共享一个对象，使用外部状态区分。 使用场景【解决那些问题】： 系统中存在大量相似对象 需要缓存池的场景【String常量池、数据库连接池】   注意事项: 必须有一个工厂类控制数据池     将大量相似对象，根据”内部的状态“精简成几个对象。 根据”外部状态“，对对象进行操作 DEMO：   围棋黑、白子。黑、白作为内部状态">
+<meta property="og:type" content="article">
+<meta property="og:title" content="享元模式">
+<meta property="og:url" content="http://yoursite.com/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="享元模式 对于类来说： 共享一个类设计。使用外部状态区分 对于对象来说： 共享一个对象，使用外部状态区分。 使用场景【解决那些问题】： 系统中存在大量相似对象 需要缓存池的场景【String常量池、数据库连接池】   注意事项: 必须有一个工厂类控制数据池     将大量相似对象，根据”内部的状态“精简成几个对象。 根据”外部状态“，对对象进行操作 DEMO：   围棋黑、白子。黑、白作为内部状态">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-23T06:54:09.000Z">
-<meta property="article:modified_time" content="2020-06-23T06:54:09.564Z">
+<meta property="article:published_time" content="2019-10-19T06:39:51.855Z">
+<meta property="article:modified_time" content="2019-10-19T06:53:58.253Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -64,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-享元模式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1/index.html" class="article-date">
-  <time datetime="2020-06-23T06:54:09.000Z" itemprop="datePublished">2020-06-23</time>
+    <a href="/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2019-10-19T06:39:51.855Z" itemprop="datePublished">2019-10-19</time>
 </a>
     
   </div>
@@ -78,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      1
+      享元模式
     </h1>
   
 
@@ -86,17 +88,61 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><ul>
+<li>对于类来说： 共享一个类设计。使用外部状态区分</li>
+<li>对于对象来说： 共享一个对象，使用外部状态区分。</li>
+<li>使用场景【解决那些问题】：<ul>
+<li>系统中存在大量相似对象</li>
+<li>需要缓存池的场景【String常量池、数据库连接池】</li>
+</ul>
+</li>
+<li>注意事项:<ul>
+<li>必须有一个工厂类控制数据池</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>将大量相似对象，根据”内部的状态“精简成几个对象。</p>
+<p>根据”外部状态“，对对象进行操作</p>
+<p>DEMO： </p>
+<ul>
+<li><p>围棋黑、白子。黑、白作为内部状态分为2个对象。棋盘的位置作为外部状态，对对象进行操作</p>
+</li>
+<li><p>外包网站： 网站的类型作为内部状态分成几个对象。</p>
+<p>​                    企业用户作为外部状态，对指定的类型的网站访问指定用户的数据。</p>
+</li>
+</ul>
+</blockquote>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/1/index.html" data-id="ckbsp26qy0000ctg1b30192ue" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" data-id="ckbsp5c3y000beig169n0880b" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/%E9%93%BE%E6%8E%A5%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          链接库
+        
+      </div>
+    </a>
+  
+  
+    <a href="/%E9%87%8D%E6%9E%84%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">重构学习</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
