@@ -20,14 +20,14 @@
     var CONFIG = {"hostname":"blog.codepower.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Xcode的Xib、Storyboard实现所见即所得1、需要@IBDesignalbe 和 @IBInspectable配合使用实现所见即所得 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768">
+  <meta name="description" content="Xcode的Xib、Storyboard实现所见即所得1、需要@IBDesignalbe 和 @IBInspectable配合使用实现所见即所得">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xcode的Xib、Storyboard实现所见即所得">
 <meta property="og:url" content="http://blog.codepower.top/xcode%E7%9A%84xib%E3%80%81storyboard%E5%AE%9E%E7%8E%B0%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97/index.html">
 <meta property="og:site_name" content="堂哥小博客">
-<meta property="og:description" content="Xcode的Xib、Storyboard实现所见即所得1、需要@IBDesignalbe 和 @IBInspectable配合使用实现所见即所得 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768">
+<meta property="og:description" content="Xcode的Xib、Storyboard实现所见即所得1、需要@IBDesignalbe 和 @IBInspectable配合使用实现所见即所得">
 <meta property="article:published_time" content="2020-06-25T08:55:54.838Z">
-<meta property="article:modified_time" content="2020-06-25T08:55:54.839Z">
+<meta property="article:modified_time" content="2020-07-08T00:47:11.779Z">
 <meta property="article:author" content="张高堂">
 <meta property="article:tag" content="软件工程、技术博客、ios、前端开发、手机开发、全栈开发">
 <meta name="twitter:card" content="summary">
@@ -85,7 +85,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -115,12 +115,22 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -172,10 +182,17 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2020-06-25 16:55:54" itemprop="dateCreated datePublished" datetime="2020-06-25T16:55:54+08:00">2020-06-25</time>
+              <time title="创建时间：2020-06-25 16:55:54" itemprop="dateCreated datePublished" datetime="2020-06-25T16:55:54+08:00">2020-06-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-08 08:47:11" itemprop="dateModified" datetime="2020-07-08T08:47:11+08:00">2020-07-08</time>
+              </span>
 
           
 
@@ -189,6 +206,8 @@
 
       
         <h3 id="Xcode的Xib、Storyboard实现所见即所得"><a href="#Xcode的Xib、Storyboard实现所见即所得" class="headerlink" title="Xcode的Xib、Storyboard实现所见即所得"></a>Xcode的Xib、Storyboard实现所见即所得</h3><p>1、需要<code>@IBDesignalbe</code> 和 <code>@IBInspectable</code>配合使用实现所见即所得</p>
+<a id="more"></a>
+
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">@<span class="type">IBDesignalbe</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyCustomerView</span>: <span class="title">UIView</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> titleLabel = getTitleLabel()</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> nibView = getNibCustomView()</span><br><span class="line">  </span><br><span class="line">  <span class="meta">@IBInspectable</span> <span class="keyword">var</span> radius: <span class="type">CGFloat</span> = <span class="number">0</span> &#123;</span><br><span class="line">    	<span class="keyword">didSet</span> &#123;</span><br><span class="line">        layer.cornerRadius = radius</span><br><span class="line">        <span class="comment">/// 自定义的视图如果包含子视图，需要下面这条命令超出边界隐藏，才能实现圆角效果</span></span><br><span class="line">        layer.masksToBounds = <span class="literal">true</span>	</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/// 标题文字</span></span><br><span class="line">  <span class="type">IBInspectable</span> <span class="keyword">var</span> titleText: <span class="type">String</span> = <span class="string">""</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">/// 代码创建对象，初始化方法</span></span><br><span class="line">  <span class="keyword">init</span>(frame: <span class="type">CGRect</span>) &#123;</span><br><span class="line">    <span class="keyword">super</span>.<span class="keyword">init</span>(frame)</span><br><span class="line">    </span><br><span class="line">    setupSubviews()</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/// Xib、Storyboard创建的对象，初始化方法</span></span><br><span class="line">  <span class="keyword">required</span> <span class="keyword">init</span>?(coder: <span class="type">NSCoder</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(coder: coder)</span><br><span class="line">    		</span><br><span class="line">    		setupSubviews()</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">layoutSubviews</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="comment">/// 这里可以用于设置所见即所得对象的属性 【比如UILabel的text属性】</span></span><br><span class="line">    		titleLabel.text = titleText</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/// 配置所有的子视图</span></span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupSubviews</span><span class="params">()</span></span> &#123;</span><br><span class="line">    addSubview(titleLabel)</span><br><span class="line">    addSubview(nibView)</span><br><span class="line">    </span><br><span class="line">    titleLabel.snp.makeConstraints &#123;</span><br><span class="line">            $<span class="number">0</span>.<span class="keyword">left</span>.top.<span class="keyword">right</span>.equalToSuperview()</span><br><span class="line">            $<span class="number">0</span>.height.equalTo(<span class="number">50</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    nibView.snp.makeConstraints &#123;</span><br><span class="line">            $<span class="number">0</span>.<span class="keyword">left</span>.bottom.<span class="keyword">right</span>.equalToSuperview()</span><br><span class="line">            $<span class="number">0</span>.height.equalTo(<span class="number">100</span>)</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">/// 获取系统的控件</span></span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">getTitleLabel</span><span class="params">()</span></span> -&gt; <span class="type">UILabel</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> lable = <span class="type">UILabel</span>()</span><br><span class="line">    lable.font = <span class="type">UIFont</span>.systemFont(ofSize: <span class="number">12.0</span>)</span><br><span class="line">    lable.textColor = <span class="type">UIColor</span>.red</span><br><span class="line">    <span class="keyword">return</span> <span class="type">UILabel</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/// 从NIB加载的视图</span></span><br><span class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">getNibCustomView</span><span class="params">()</span></span> -&gt; <span class="type">MyNibCustomView</span> &#123;</span><br><span class="line">    </span><br><span class="line">    #<span class="keyword">if</span> <span class="type">TARGET_INTERFACE_BUILDER</span></span><br><span class="line">    <span class="keyword">let</span> bundle = <span class="type">Bundle</span>(<span class="keyword">for</span>: <span class="type">MyNibCustomView</span>.classForCoder())</span><br><span class="line">    #<span class="keyword">else</span></span><br><span class="line">    <span class="keyword">let</span> bundle = <span class="type">Bundle</span>.main</span><br><span class="line">    #endif</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> nib = <span class="type">UINib</span>(nibName: <span class="string">"MyNibCustomView"</span>, bundle: bundle)</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> view = nib.instantiate(withOwner: <span class="literal">nil</span>, options: <span class="literal">nil</span>).last <span class="keyword">as</span>? <span class="type">MyNibCustomView</span> <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">fatalError</span>(<span class="string">"没有找到MyNibCustomView"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> view</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -269,10 +288,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -293,7 +312,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
   </nav>
@@ -326,7 +345,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">张高堂</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
         
