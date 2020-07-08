@@ -2,7 +2,7 @@
 
 1、需要`@IBDesignalbe` 和 `@IBInspectable`配合使用实现所见即所得
 
-
+<!-- more -->
 
 ```swift
 @IBDesignalbe

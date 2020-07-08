@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: 堂哥小博客
+subtitle: '技术分享博客'
+description: '技术整理、学习笔记、技术栈梳理'
+keywords: '软件工程、技术博客、ios、前端开发、手机开发、全栈开发'
+author: 张高堂
+language: 'zh-Hans'
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.codepower.top
 root: /
 permalink: :post_title/
 permalink_defaults:
@@ -93,12 +93,14 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repo: git@github.com:dadage456/dadage456.github.io.git
+  repo:
+    github: git@github.com:dadage456/dadage456.github.io.git
+    cent: root@t.god01.co:/var/repo/blog.git
   branch: master
 
