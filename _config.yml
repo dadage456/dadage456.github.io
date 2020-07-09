@@ -100,7 +100,7 @@ theme: next
 deploy:
   type: 'git'
   repo:
-    github: git@github.com:dadage456/dadage456.github.io.git
+    #github: git@github.com:dadage456/dadage456.github.io.git
     cent: root@t.god01.co:/var/repo/blog.git
   branch: master
 
