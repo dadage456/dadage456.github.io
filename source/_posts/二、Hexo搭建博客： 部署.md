@@ -5,7 +5,7 @@ categories:
 ---
 
 
-### 前言
+## 前言
 
 > Hexo可以直接部署到github上，通过 **https://用户名.github.io** 访问博客。
 >
@@ -15,7 +15,7 @@ categories:
 
 <!-- more -->
 
-### 部署到github上
+## 部署到github上
 
 * 配置ssh公钥到github。使用ssh访问github.
 
@@ -35,7 +35,7 @@ categories:
 
   
 
-### 部署到云服务上
+## 部署到云服务上
 
 * 配置ssh公钥到云服务。可以使用ssh访问云服务。
 

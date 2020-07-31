@@ -4,7 +4,7 @@ categories:
 - Hexo博客
 ---
 
-#### 创建持续集成的git分支
+## 创建持续集成的git分支
 
 * 注册[Travis CI](https://travis-ci.org/) 账号，绑定github
 
@@ -38,7 +38,7 @@ categories:
 
 <!-- more -->
 
-#### 配置持续集成文件
+## 配置持续集成文件
 
 > `.travis.yml` 是 Travis CI 的部署配置文件，Travis CI 部署时会自动读取我们每次 Commit 中是否包含 `.travis.yml` ，有此文件才会开始部署。
 >
@@ -84,7 +84,7 @@ deploy:
 
 
 
-#### 自动部署
+## 自动部署
 
 经过以上步骤的配置，发布博客的命令就变更为：
 
