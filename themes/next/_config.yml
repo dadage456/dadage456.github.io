@@ -122,6 +122,7 @@ menu:
   archives: /archives/ || fa fa-archive
   about: /about/ || fa fa-user
   flutter: /flutter/ || fa fa-th
+  uml:  /uml/
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
