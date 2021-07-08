@@ -123,6 +123,7 @@ menu:
   about: /about/ || fa fa-user
   flutter: https://blog.bugu.cool/flutter/ || fa fa-th
   uml学习笔记:  https://blog.bugu.cool/uml/ || fa fa-th
+  重构代码学习笔记:  https://blog.bugu.cool/refactor/ || fa fa-th
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
